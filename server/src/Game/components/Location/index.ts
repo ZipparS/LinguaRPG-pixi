@@ -1,0 +1,1 @@
+export { GameLocation } from "./Location";

@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <p>Actors</p>
+        <canvas id="actors"></canvas>
+        <h1></h1>
+        <canvas id="actor"></canvas>
+        <script>
+
+            const matrix = [
+                ['farmerM', 'teacherM', 'oldyM', 'boldM', 'greenKnightM', 'pinkyW', 'blondyM', 'scoutW', 'redhatW', 'casperM', 'wolverineM', 'ramboM', 'scientistM', 'scientistW', 'galaxyM', 'frankensteinM', 'rockerM', 'hitmanM', 'chadM', 'clericM'],
+                ['liyaW', 'cookerW', 'landlordW', 'workerW', 'timmyM', 'indianaM', 'sailormoonW', 'bloodrainM', 'riderW', 'maiyaW', 'handsomeM', 'geekW', 'cyberW', 'warriorW', 'fairyW', 'robotM', 'viviM', 'technoGuardM', 'technoKnightM', 'technoTankM'],
+                ['robynM', 'soldierM', 'soldierPlusM', 'soldierGodM', 'guardSimpleM', 'guardBlueM', 'guardGreenM', 'guardRedM', 'colorM', 'ladyW', 'elvisM', 'cowboyM', 'gentlemanM', 'beautyW', 'agentM', 'serveW', 'captainM', 'majorM', 'rangerM', 'firemanM'],
+                ['beretM', 'beretW', 'militaryM', 'shipCaptainM', 'matrixM', 'cloakHeroM', 'ushankaM', 'ushankaMajorM', 'basketbollM', 'cheerW', 'arnoldM', 'hairyScientistM', 'boldScientistM', 'aquamanM', 'hotdogSellerM', 'honeySellerW', 'minerW', 'minerM', 'saverM', 'saverW']
+            ];
+            const canvasActors = document.querySelector('#actors');
+            const canvasActor = document.querySelector('#actor');
+            const h1 = document.querySelector('h1');
+            canvasActor.width = 26 * 4 * 3
+            canvasActor.height = 36 * 4 * 3
+            canvasActors.width = 26 * 4 * 5 * 3;
+            canvasActors.height = 36 * 4 * 3;
+            canvasActors.style.backgroundColor = 'black';
+
+            const img = document.createElement('img');
+            img.src = './actors.png';
+            img.onload = () => {
+                const ctxActors = canvasActors.getContext('2d');
+                const ctxActor = canvasActor.getContext('2d');
+                ctxActors.scale(3, 3)
+                ctxActor.scale(3, 3)
+                for (let col = 0; col <= 4; col++) {
+                    for (let row = 0; row < 20; row++) {
+                        const sprite = ctxActors.drawImage(img, row * 26 * 3 + 26, col * 36 * 4, 26, 36, row * 26, col * 36, 26, 36);
+                        canvasActors.addEventListener('click', (event) => {
+                            if (event.offsetX > row * 26 * 3 && event.offsetX < row * 26 * 3 + 26 * 3 && event.offsetY > col * 36 * 3 && event.offsetY < col * 36 * 3 + 36 * 3) {
+                                h1.textContent = matrix[col][row]
+                                ctxActor.clearRect(0, 0, canvasActor.width, canvasActor.height);
+                                ctxActor.drawImage(img, row * 26 * 3, col * 36 * 4, 26 * 3, 36 * 4, 0, 0, 26 * 3, 36 * 3)
+
+                            }
+                        })
+                    } 
+                }
+            }
+        </script>
+    </body>
+</html>

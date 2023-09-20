@@ -1,0 +1,21 @@
+{
+    "width": 60,
+    "height": 16,
+    "tileWidth": 26,
+    "tileHeight": 36,
+    "actorsMatrix": [
+        "farmerM", "teacherM", "oldyM", "boldM", "greenKnightM", 
+        "pinkyW", "blondyM", "scoutW", "redhatW", "casperM", "wolverineM", 
+        "ramboM", "scientistM", "scientistW", "galaxyM", "frankensteinM", 
+        "rockerM", "hitmanM", "chadM", "clericM", "liyaW", "cookerW", 
+        "landlordW", "workerW", "timmyM", "indianaM", "sailormoonW", 
+        "bloodrainM", "riderW", "maiyaW", "handsomeM", "geekW", "cyberW", 
+        "warriorW", "fairyW", "robotM", "viviM", "technoGuardM", "technoKnightM", "technoTankM",
+        "robynM", "soldierM", "soldierPlusM", "soldierGodM", "guardSimpleM", "guardBlueM", 
+        "guardGreenM", "guardRedM", "colorM", "ladyW", "elvisM", "cowboyM", "gentlemanM", "beautyW", 
+        "agentM", "serveW", "captainM", "majorM", "rangerM", "firemanM",
+        "beretM", "beretW", "militaryM", "shipCaptainM", "matrixM", "cloakHeroM", "ushankaM", 
+        "ushankaMajorM", "basketbollM", "cheerW", "arnoldM", "hairyScientistM", "boldScientistM", 
+        "aquamanM", "hotdogSellerM", "honeySellerW", "minerW", "minerM", "saverM", "saverW"
+    ]
+}
